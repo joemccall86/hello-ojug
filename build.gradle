@@ -39,6 +39,7 @@ dependencies {
     compile('javax.servlet:jstl')
 	developmentOnly('org.springframework.boot:spring-boot-devtools')
 	runtimeOnly('org.postgresql:postgresql')
+    runtimeOnly('com.h2database:h2')
     providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
     providedRuntime('org.apache.tomcat.embed:tomcat-embed-jasper')
 	testImplementation('org.springframework.boot:spring-boot-starter-test')

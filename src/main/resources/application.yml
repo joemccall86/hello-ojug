@@ -9,3 +9,18 @@ spring:
     view:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+#
+#  data:
+#    jpa:
+#      repositories:
+#        bootstrap-mode: default
+#
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        SQL: debug
