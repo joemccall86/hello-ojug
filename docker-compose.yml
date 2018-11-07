@@ -1,0 +1,25 @@
+version: '3'
+services:
+  db:
+    # Grab the latest postgres image from docker hub. I would recommend using an explicit version here to track upgrades
+    # and narrow down breakages.
+    image: postgres:10.5-alpine
+
+    # Expose the port on the local network interface so our local java instance can see it
+    ports:
+      - "55432:5432"
+
+    # Send in environment variables here based on convention so we can match them in our application.yml file
+    # These are documented here: https://store.docker.com/images/postgres?tab=description
+    environment:
+      POSTGRES_DB: DockerTestDB
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: s3cret
+
+    # Persist the volumes between starts (optional)
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+# Declare the volumes used for persisted data here
+volumes:
+  db-data:
