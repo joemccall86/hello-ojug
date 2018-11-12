@@ -22,5 +22,6 @@ public class DockerLoginDemoApplication extends SpringBootServletInitializer imp
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/login").setViewName("login");
+		registry.addViewController("/email-sent").setViewName("email-sent");
 	}
 }

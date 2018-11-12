@@ -25,6 +25,8 @@
             <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
         </p>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+        <a href="${pageContext.request.contextPath}/forgot-password">Forgot password?</a>
     </form:form>
 </body>
 </html>
