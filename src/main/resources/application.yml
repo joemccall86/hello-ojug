@@ -13,14 +13,14 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-#
-#  data:
-#    jpa:
-#      repositories:
-#        bootstrap-mode: default
-#
-#logging:
-#  level:
-#    org:
-#      hibernate:
-#        SQL: debug
+
+  mail:
+    host: localhost
+    port: 3025
+    username: user1@example.com
+    password: doesnotmatter
+    properties:
+      mail.transport.protocol: smtp
+      mail.smtp.auth: true
+      mail.smtp.port: 3025
+      mail.smtp.starttls.enable: false

@@ -22,4 +22,11 @@ public class WebUser {
         this.username = username;
         this.password = password;
     }
+
+    public WebUser() {
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
