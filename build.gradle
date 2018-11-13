@@ -10,6 +10,10 @@ buildscript {
 	}
 }
 
+plugins {
+	id "com.avast.gradle.docker-compose" version "0.8.12"
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -31,6 +35,8 @@ configurations {
 	}
 }
 
+// Tell docker-compose that we need the docker-compose services to be ready
+dockerCompose.isRequiredBy(bootRun)
 
 dependencies {
 	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
